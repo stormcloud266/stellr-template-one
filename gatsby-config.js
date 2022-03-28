@@ -2,8 +2,8 @@ const path = require('path')
 
 module.exports = {
 	siteMetadata: {
-		title: 'Gatsby Starter Stormcloud',
-		siteUrl: `https://github.com/stormcloud266/gatsby-starter-v4`,
+		title: 'Stellr Template One',
+		siteUrl: `https://github.com/stormcloud266/stellr-template-one`,
 		description: `Gatsby v4 starter for getting website projects up and running fast.`,
 	},
 	plugins: [
@@ -11,6 +11,7 @@ module.exports = {
 		'gatsby-plugin-image',
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-sitemap',
+		'gatsby-plugin-robots-txt',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
