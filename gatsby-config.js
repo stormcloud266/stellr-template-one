@@ -63,7 +63,9 @@ module.exports = {
 			options: {
 				alias: {
 					'@components': path.resolve(__dirname, 'src/components'),
+					'@pages': path.resolve(__dirname, 'src/components/pages'),
 					'@global': path.resolve(__dirname, 'src/components/global'),
+					'@blocks': path.resolve(__dirname, 'src/components/blocks'),
 					'@UI': path.resolve(__dirname, 'src/components/UI'),
 					'@animations': path.resolve(__dirname, 'src/components/animations'),
 					'@hooks': path.resolve(__dirname, 'src/hooks'),
