@@ -18,17 +18,8 @@ module.exports = {
 				icon: 'src/assets/images/favicon.png',
 			},
 		},
-		'gatsby-plugin-mdx',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
-		{
-			resolve: 'gatsby-plugin-web-font-loader',
-			options: {
-				google: {
-					families: ['Heebo:400,700'],
-				},
-			},
-		},
 		{
 			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
