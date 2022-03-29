@@ -36,7 +36,9 @@ const IndexPage = ({ data }) => {
 				</Fade>
 			</Container>
 
-			<Gallery images={data.galleryImages.edges} />
+			<Container wrapper section>
+				<Gallery images={data.galleryImages.edges} />
+			</Container>
 		</Layout>
 	)
 }
