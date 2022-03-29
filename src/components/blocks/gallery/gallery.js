@@ -9,7 +9,7 @@ import Modal from './modal'
 const Gallery = ({ images }) => {
 	// State
 	const [isOpen, setIsOpen] = useState(false)
-	const [modalImage, setModalImage] = useState([])
+	const [modalImage, setModalImage] = useState(null)
 	const [currentImg, setCurrentImg] = useState(null)
 
 	// Refs
@@ -22,6 +22,10 @@ const Gallery = ({ images }) => {
 		}
 	}
 
+	const getAlt = (name) => {
+		return name.replace(/-/g, ' ').trim()
+	}
+
 	// Handlers
 	const openModal = (image, i) => {
 		setModalImage(image)
@@ -30,7 +34,7 @@ const Gallery = ({ images }) => {
 	}
 
 	const closeModal = () => {
-		setModalImage([])
+		setModalImage(null)
 		setIsOpen(false)
 		imageRefs.current[currentImg].focus()
 	}
@@ -40,21 +44,22 @@ const Gallery = ({ images }) => {
 			<Helmet>{isOpen && <body body-fixed-gallery />}</Helmet>
 
 			<div className={styles.gallery}>
-				{images.map(({ node: image }, i) => (
-					<Fade>
-						<div
-							key={i}
-							onClick={() => openModal(image, i)}
-							onKeyPress={(e) => e.key === 'Enter' && openModal(image, i)}
-							tabIndex='0'
-							className={styles.image}
-							ref={addImageRefs}
-							role='button'
-						>
-							<GatsbyImage image={getImage(image)} alt='' />
-						</div>
-					</Fade>
-				))}
+				{images.map(({ node: image }, i) => {
+					return (
+						<Fade key={image.id}>
+							<div
+								onClick={() => openModal(image, i)}
+								onKeyPress={(e) => e.key === 'Enter' && openModal(image, i)}
+								tabIndex='0'
+								className={styles.image}
+								ref={addImageRefs}
+								role='button'
+							>
+								<GatsbyImage image={getImage(image)} alt={getAlt(image.name)} />
+							</div>
+						</Fade>
+					)
+				})}
 			</div>
 
 			<AnimatePresence>

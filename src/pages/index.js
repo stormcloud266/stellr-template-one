@@ -6,8 +6,6 @@ import { Slide, Fade } from '@animations'
 import { Gallery } from '@blocks'
 
 const IndexPage = ({ data }) => {
-	console.log('data: ', data)
-
 	return (
 		<Layout>
 			<Seo />
@@ -54,6 +52,7 @@ export const query = graphql`
 			edges {
 				node {
 					name
+					id
 					childImageSharp {
 						gatsbyImageData(
 							layout: CONSTRAINED

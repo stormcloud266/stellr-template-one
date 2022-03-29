@@ -6,14 +6,19 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import * as styles from './gallery.module.scss'
 
-const Modal = ({ isOpen, closeModal, modalImage }) => {
+const Modal = ({ closeModal, modalImage }) => {
 	const closeButtonRef = useRef(null)
 
+	const handleKeyup = (e) => {
+		if (e.key !== 'Escape') return
+		closeModal()
+	}
+
 	useEffect(() => {
-		if (isOpen) {
-			closeButtonRef.current.focus()
-		}
-	}, [isOpen])
+		closeButtonRef.current.focus()
+		window.addEventListener('keydown', handleKeyup)
+		return () => window.removeEventListener('keydown', handleKeyup)
+	}, [])
 
 	return ReactDOM.createPortal(
 		<motion.div
@@ -21,19 +26,17 @@ const Modal = ({ isOpen, closeModal, modalImage }) => {
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			style={{ zIndex: 3000 }}
+			onClick={closeModal}
 		>
-			<div
-				className={styles.modal}
-				onKeyUp={(e) => e.key === 'Escape' && closeModal()}
-				tabIndex='0'
-				role='button'
-			>
+			<div className={styles.modal} tabIndex='0' role='button'>
 				<Container wrapper section className={styles.modalWrapper}>
-					<GatsbyImage
-						image={getImage(modalImage)}
-						alt={modalImage.description}
-						imgStyle={{ objectFit: 'contain' }}
-					/>
+					{modalImage && (
+						<GatsbyImage
+							image={getImage(modalImage)}
+							alt=''
+							imgStyle={{ objectFit: 'contain' }}
+						/>
+					)}
 					<button
 						onClick={closeModal}
 						className={styles.closeButton}
