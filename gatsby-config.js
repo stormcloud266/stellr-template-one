@@ -44,6 +44,14 @@ module.exports = {
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
+				name: 'home-gallery',
+				path: './src/assets/images/home-gallery',
+			},
+			__key: 'home-gallery',
+		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
 				name: 'images',
 				path: './src/assets/images/',
 			},
