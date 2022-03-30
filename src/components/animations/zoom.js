@@ -1,50 +1,45 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 
-const Fade = ({
+const Zoom = ({
 	delay = 0,
-	duration,
-	transformDuration = 1.5,
-	opacityDuration = 0.5,
+	duration = 1.4,
 	threshold = 0.2,
-	y = 0,
-	x = 0,
+	out = false,
 	triggerOnce = true,
-	noOpacityAnim = false,
 	inline,
 	children,
 	...rest
 }) => {
 	const variants = {
-		hidden: { opacity: noOpacityAnim ? 1 : 0, y, x },
+		hidden: { scale: out ? 1 : 1.07 },
 		visible: {
-			opacity: 1,
-			y: 0,
-			x: 0,
+			scale: out ? 1.1 : 1,
 			transition: {
 				duration,
 				delay,
-				y: {
-					ease: [0.185, -0.01, 0, 1],
-					duration: duration || transformDuration,
-				},
-				x: {
-					ease: [0.185, -0.01, 0, 1],
-					duration: duration || transformDuration,
-				},
-				opacity: {
-					duration: duration || opacityDuration,
-				},
+				ease: [0.185, -0.01, 0, 1],
 			},
 		},
 	}
+	const prefersReducedMotion = useReducedMotion()
+
+	const style = {
+		position: 'absolute',
+		top: 0,
+		right: 0,
+		bottom: 0,
+		left: 0,
+		zIndex: 0,
+	}
 
 	const commonProps = {
-		variants,
+		variants: prefersReducedMotion ? '' : variants,
 		initial: 'hidden',
 		whileInView: 'visible',
 		viewport: { once: triggerOnce, amount: threshold },
+		style,
 		...rest,
 	}
 
@@ -57,18 +52,14 @@ const Fade = ({
 	)
 }
 
-export default Fade
+export default Zoom
 
-Fade.propTypes = {
+Zoom.propTypes = {
 	delay: PropTypes.number,
-	transformDuration: PropTypes.number,
-	opacityDuration: PropTypes.number,
 	duration: PropTypes.number,
 	threshold: PropTypes.number,
-	y: PropTypes.number,
-	x: PropTypes.number,
+	out: PropTypes.bool,
 	triggerOnce: PropTypes.bool,
-	noOpacityAnim: PropTypes.bool,
 	inline: PropTypes.bool,
 	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,
