@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
-
+import { WindowWidthProvider } from '../../context'
 import { Footer, Header, SkipLink } from '@global'
 // import CookieBanner from '@global/cookieBanner'
 
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
 	const mainRef = useRef()
 
 	return (
-		<>
+		<WindowWidthProvider>
 			<SkipLink main={mainRef} />
 			<Header />
 			<main role='main' id='main' tabIndex='-1' ref={mainRef}>
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 			</main>
 			<Footer />
 			{/* <CookieBanner /> */}
-		</>
+		</WindowWidthProvider>
 	)
 }
 
