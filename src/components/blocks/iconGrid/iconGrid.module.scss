@@ -1,0 +1,41 @@
+@import '@globalStyles/variables';
+@import '@globalStyles/mixins';
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: $size-2;
+	row-gap: $size-6;
+}
+
+.col2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.col4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.center {
+	text-align: center;
+}
+
+.title {
+	margin-top: $size-1;
+	margin-bottom: $size-2;
+}
+
+@include whenMedium {
+	.list,
+	.col4 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@include whenSmall {
+	.list,
+	.col2,
+	.col4 {
+		grid-template-columns: 1fr;
+	}
+}

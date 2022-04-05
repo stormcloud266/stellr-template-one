@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Layout, Seo } from '@global'
 import { Container, Title } from '@UI'
-import { Gallery, Hero } from '@blocks'
+import { Gallery, Hero, IconGrid } from '@blocks'
 
 const IndexPage = ({ data }) => {
 	return (
@@ -11,8 +11,12 @@ const IndexPage = ({ data }) => {
 
 			<Hero />
 
-			<Container wrapper section>
-				<Gallery images={data.galleryImages.edges} />
+			<IconGrid />
+
+			<Container bgAccent>
+				<Container wrapper section>
+					<Gallery images={data.galleryImages.edges} />
+				</Container>
 			</Container>
 		</Layout>
 	)
