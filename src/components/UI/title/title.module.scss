@@ -28,7 +28,7 @@
 }
 
 .sm {
-	font-size: $size-5;
+	font-size: $size-4;
 }
 
 @include whenMedium {
@@ -37,7 +37,7 @@
 	}
 
 	.lg {
-		font-size: $size-7;
+		font-size: $size-8;
 	}
 
 	.md {
@@ -45,7 +45,7 @@
 	}
 
 	.sm {
-		font-size: $size-4;
+		font-size: $size-3;
 	}
 }
 
@@ -55,14 +55,10 @@
 	}
 
 	.lg {
-		font-size: $size-6;
+		font-size: $size-7;
 	}
 
 	.md {
 		font-size: $size-5;
-	}
-
-	.sm {
-		font-size: $size-4;
 	}
 }
