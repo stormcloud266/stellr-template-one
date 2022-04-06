@@ -78,26 +78,26 @@ const iconVariants = {
 }
 
 const Faq = () => {
-	const [activeItem, setActiveItem] = useState('')
+	const [activeItems, setActiveItems] = useState([])
 
 	const toggleActive = (clicked) => {
-		if (clicked === activeItem) {
-			setActiveItem('')
+		const isActive = activeItems.includes(clicked)
+
+		if (isActive) {
+			const arr = activeItems.filter((item) => item !== clicked)
+			setActiveItems(arr)
 		} else {
-			setActiveItem(clicked)
+			setActiveItems((prevState) => [clicked, ...prevState])
 		}
 	}
 
 	return (
 		<Container wrapperSm className={styles.faq}>
-			{list.map((item) => {
-				const isActive = activeItem === item.q
+			{list.map((item, i) => {
+				const isActive = activeItems.includes(i)
 				return (
 					<div key={item.q} className={styles.group}>
-						<button
-							className={styles.toggle}
-							onClick={() => toggleActive(item.q)}
-						>
+						<button className={styles.toggle} onClick={() => toggleActive(i)}>
 							<span>{item.q}</span>
 							<motion.span
 								variants={iconVariants}
