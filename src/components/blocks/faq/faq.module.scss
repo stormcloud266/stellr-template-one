@@ -1,10 +1,13 @@
+@import '@globalStyles/variables';
+@import '@globalStyles/mixins';
+
 .faq {
 	display: flex;
 	flex-direction: column;
 }
 
 .group {
-	margin-bottom: 1.6rem;
+	margin-bottom: $size-2;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -13,7 +16,7 @@
 
 .toggle,
 .answer p {
-	padding: 1.8rem 2.4rem;
+	padding: $size-0 $size-1;
 	text-align: left;
 }
 
@@ -39,4 +42,31 @@
 
 .answer {
 	height: 0;
+}
+
+// list
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: $size-6;
+	row-gap: $size-8;
+}
+
+.title {
+	font-weight: bold;
+	margin-bottom: $size-0;
+}
+
+@include whenMedium {
+	.list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@include whenSmall {
+	.list {
+		grid-template-columns: 1fr;
+		row-gap: $size-6;
+	}
 }

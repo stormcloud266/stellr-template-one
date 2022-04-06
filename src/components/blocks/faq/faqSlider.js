@@ -77,7 +77,7 @@ const iconVariants = {
 	},
 }
 
-const Faq = () => {
+const FaqSlider = () => {
 	const [activeItems, setActiveItems] = useState([])
 
 	const toggleActive = (clicked) => {
@@ -122,4 +122,4 @@ const Faq = () => {
 	)
 }
 
-export default Faq
+export default FaqSlider
