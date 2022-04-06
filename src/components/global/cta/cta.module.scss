@@ -1,0 +1,28 @@
+@import '@globalStyles/variables';
+@import '@globalStyles/mixins';
+
+.bg {
+	background-color: $color-background-accent;
+}
+
+.inner {
+	padding: $size-9 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.title {
+	margin-right: $size-3;
+}
+
+@include whenSmall {
+	.inner {
+		flex-direction: column;
+	}
+
+	.title {
+		margin-right: 0;
+		margin-bottom: $size-3;
+	}
+}

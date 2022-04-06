@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout, Seo } from '@global'
+import { Layout, Seo, Cta } from '@global'
 import { Container, Title } from '@UI'
 import { Gallery, Hero, IconGrid, FaqSlider, FaqList } from '@blocks'
 
@@ -16,6 +16,8 @@ const IndexPage = ({ data }) => {
 			<Container section>
 				<FaqSlider />
 			</Container>
+
+			<Cta />
 
 			<Container section>
 				<FaqList />
