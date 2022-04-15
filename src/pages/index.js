@@ -28,6 +28,7 @@ const IndexPage = ({ data }) => {
 					<div>
 						<StaticImage
 							src='../assets/images/hero.jpg'
+							alt=''
 							layout='constrained'
 							width={800}
 						/>

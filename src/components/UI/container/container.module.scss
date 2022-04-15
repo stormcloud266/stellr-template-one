@@ -87,6 +87,10 @@
 // colors
 .bgDark {
 	background-color: $color-background-dark;
+}
+
+.bgDark,
+.textLight {
 	color: rgb(231, 231, 231);
 	h1,
 	h2,

@@ -1,15 +1,27 @@
 @import '@globalStyles/variables';
+@import '@globalStyles/mixins';
 
 .footer {
 	padding: 3.2rem 0;
 	font-size: $size-0;
 	background-color: $color-footer-background;
-	text-align: center;
+}
+
+.inner {
+	justify-content: space-between;
 }
 
 .nav {
+	text-align: right;
 	a {
 		color: hsl(0, 0%, 100%);
 		margin: 0 2rem;
+	}
+}
+
+@include whenMedium {
+	.nav,
+	.inner {
+		text-align: center;
 	}
 }
