@@ -42,14 +42,13 @@ const IndexPage = ({ data }) => {
 
 			<Cta />
 
-			<Container section>
-				<FaqList />
-			</Container>
-
 			<Container bgAccent>
 				<Container wrapper section>
 					<Gallery images={data.galleryImages.edges} />
 				</Container>
+			</Container>
+			<Container section>
+				<FaqList />
 			</Container>
 		</Layout>
 	)

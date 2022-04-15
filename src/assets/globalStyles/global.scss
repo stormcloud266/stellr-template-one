@@ -69,6 +69,10 @@ textarea {
 	line-height: inherit;
 }
 
+textarea {
+	resize: none;
+}
+
 button {
 	border: none;
 	outline: none;

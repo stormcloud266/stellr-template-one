@@ -1,0 +1,48 @@
+@import '@globalStyles/variables';
+@import '@globalStyles/mixins';
+
+.list {
+	margin-top: $size-4;
+
+	li {
+		display: flex;
+		align-items: center;
+		margin-top: $size-2;
+
+		span {
+			margin-left: $size-0;
+		}
+	}
+}
+
+.form {
+	max-width: 56rem;
+	margin: 0 auto;
+}
+
+.formSection {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: $size-2;
+
+	label {
+		margin-bottom: 0.2rem;
+	}
+
+	input,
+	textarea {
+		border: 1px solid transparent;
+		padding: 0.4rem 0.8rem;
+		border-radius: 4px;
+	}
+
+	textarea {
+		height: 12rem;
+	}
+}
+
+@include whenMedium {
+	.flexItemText {
+		margin-bottom: $size-6 !important;
+	}
+}
