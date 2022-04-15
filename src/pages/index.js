@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import { Layout, Seo, Cta } from '@global'
 import { Container, Title } from '@UI'
-import { Gallery, Hero, IconGrid, FaqSlider, FaqList } from '@blocks'
+import { Gallery, Hero, IconGrid, FaqSlider, FaqList, TwoColumn } from '@blocks'
 
 const IndexPage = ({ data }) => {
 	return (
@@ -12,6 +13,27 @@ const IndexPage = ({ data }) => {
 			<Hero />
 
 			<IconGrid />
+
+			<TwoColumn
+				left={
+					<Container textBlock>
+						<Title>Welcome to this awesome website</Title>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+							molestiae deserunt quia dolor aspernatur!
+						</p>
+					</Container>
+				}
+				right={
+					<div>
+						<StaticImage
+							src='../assets/images/hero.jpg'
+							layout='constrained'
+							width={800}
+						/>
+					</div>
+				}
+			/>
 
 			<Container section>
 				<FaqSlider />
