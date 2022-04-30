@@ -2,7 +2,7 @@
 @import '@globalStyles/mixins';
 
 .footer {
-	padding: 3.2rem 0;
+	padding-top: $size-8;
 	font-size: $size-0;
 	background-color: $color-footer-background;
 }
@@ -11,12 +11,43 @@
 	justify-content: space-between;
 }
 
+.title {
+	font-size: $size-2;
+	margin-bottom: 0.8rem;
+}
+
 .nav {
-	text-align: right;
 	a {
 		color: hsl(0, 0%, 100%);
-		margin: 0 2rem;
+		margin: 0.8rem 0;
+		display: block;
 	}
+}
+
+.contact {
+	display: flex;
+	justify-content: center;
+}
+
+.address {
+	a,
+	p {
+		display: block;
+	}
+	a {
+		margin: 0.8rem 0;
+	}
+}
+
+.branding {
+	margin-top: $size-8;
+	padding-top: $size-5;
+	padding-bottom: $size-5;
+	background-color: black;
+}
+
+.brandingLink {
+	margin-top: 0.8rem;
 }
 
 @include whenMedium {
