@@ -22,8 +22,8 @@ const Header = () => {
 
 	return (
 		<>
-			<Fade>
-				<Container wrapper className={styles.quickAction}>
+			<Fade className={styles.quickAction}>
+				<Container wrapper>
 					<a href='tel:+1-555-555-5555'>Call Now +1-555-555-5555</a>
 				</Container>
 			</Fade>

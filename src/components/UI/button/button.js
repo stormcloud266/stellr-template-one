@@ -1,46 +1,49 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './button.module.scss'
 
-const Button = ({ href, to, cta, children, className, ...rest }) => {
-	const classes = classnames(
-		cta && styles.cta,
-		styles.button,
-		className && className
-	)
+const Button = forwardRef(
+	({ href, to, cta, children, className, ...rest }, ref) => {
+		const classes = classnames(
+			cta && styles.cta,
+			styles.button,
+			className && className
+		)
 
-	let element
+		let element
 
-	if (href) {
-		element = (
-			<a
-				href={href}
-				className={classes}
-				target='_blank'
-				rel='noreferrer'
-				{...rest}
-			>
-				{children}
-			</a>
-		)
-	} else if (to) {
-		element = (
-			<Link to={to} {...rest} className={classes}>
-				{children}
-			</Link>
-		)
-	} else {
-		element = (
-			<button {...rest} className={classes}>
-				{children}
-			</button>
-		)
+		if (href) {
+			element = (
+				<a
+					href={href}
+					className={classes}
+					target='_blank'
+					rel='noreferrer'
+					ref={ref}
+					{...rest}
+				>
+					{children}
+				</a>
+			)
+		} else if (to) {
+			element = (
+				<Link to={to} {...rest} className={classes} ref={ref}>
+					{children}
+				</Link>
+			)
+		} else {
+			element = (
+				<button {...rest} className={classes} ref={ref}>
+					{children}
+				</button>
+			)
+		}
+
+		return element
 	}
-
-	return element
-}
+)
 
 export default Button
 

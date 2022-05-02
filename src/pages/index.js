@@ -20,29 +20,31 @@ const IndexPage = ({ data }) => {
 
 			<Hero />
 
-			<IconGrid />
+			<Container section>
+				<TwoColumn
+					left={
+						<Container textBlock>
+							<Title>Welcome to this awesome website</Title>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Laborum molestiae deserunt quia dolor aspernatur!
+							</p>
+						</Container>
+					}
+					right={
+						<Image>
+							<StaticImage
+								src='../assets/images/hero.jpg'
+								alt=''
+								layout='constrained'
+								width={800}
+							/>
+						</Image>
+					}
+				/>
+			</Container>
 
-			<TwoColumn
-				left={
-					<Container textBlock>
-						<Title>Welcome to this awesome website</Title>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-							molestiae deserunt quia dolor aspernatur!
-						</p>
-					</Container>
-				}
-				right={
-					<Image>
-						<StaticImage
-							src='../assets/images/hero.jpg'
-							alt=''
-							layout='constrained'
-							width={800}
-						/>
-					</Image>
-				}
-			/>
+			<IconGrid />
 
 			<Container section>
 				<FaqSlider />

@@ -43,22 +43,7 @@
 
 .closeButton {
 	margin: 2rem auto 0;
-	background-color: var(--color-accent);
-	border: 2px solid var(--color-accent);
-	border-radius: 3px;
-	padding: 0.8rem 2rem;
-	text-transform: uppercase;
-	color: var(--color-bg-light);
 	display: block;
-	font-size: 17px !important;
-	transition: color 0.3s, background-color 0.3s, border-color 0.3s;
-
-	&:hover,
-	&:focus {
-		color: var(--color-bg-light);
-		background-color: var(--color-accent-light);
-		border-color: var(--color-accent-light);
-	}
 }
 
 .modalWrapper {
