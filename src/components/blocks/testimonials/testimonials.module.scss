@@ -1,0 +1,21 @@
+@import '@globalStyles/variables';
+@import '@globalStyles/mixins';
+
+.cardContainer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: $size-2;
+	margin-top: $size-6;
+}
+
+@include whenMedium {
+	.cardContainer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@include whenSmall {
+	.cardContainer {
+		grid-template-columns: 1fr;
+	}
+}

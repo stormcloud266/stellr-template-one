@@ -5,6 +5,7 @@ import Container from './container/container'
 import FlexContainer from './flex/flexContainer'
 import FlexItem from './flex/flexItem'
 import Grid from './grid/grid'
+import TestimonialCard from './testimonialCard/testimonialCard'
 import Title from './title/title'
 
 export {
@@ -15,5 +16,6 @@ export {
 	FlexContainer,
 	FlexItem,
 	Grid,
+	TestimonialCard,
 	Title,
 }

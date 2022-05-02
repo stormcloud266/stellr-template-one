@@ -3,7 +3,15 @@ import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Layout, Seo, Cta } from '@global'
 import { Container, Title } from '@UI'
-import { Gallery, Hero, IconGrid, FaqSlider, FaqList, TwoColumn } from '@blocks'
+import {
+	Gallery,
+	Hero,
+	IconGrid,
+	FaqSlider,
+	FaqList,
+	TwoColumn,
+	Testimonials,
+} from '@blocks'
 
 const IndexPage = ({ data }) => {
 	return (
@@ -41,6 +49,8 @@ const IndexPage = ({ data }) => {
 			</Container>
 
 			<Cta />
+
+			<Testimonials />
 
 			<Container bgAccent>
 				<Container wrapper section>
