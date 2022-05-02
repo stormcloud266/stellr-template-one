@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from '@UI'
+import { Fade } from '@animations'
 import * as styles from './faq.module.scss'
 
 const list = [
@@ -35,8 +36,10 @@ const FaqList = () => {
 			<ul className={styles.list}>
 				{list.map(({ q, a }, i) => (
 					<li key={i}>
-						<p className={styles.title}>{q}</p>
-						<p className={styles.body}>{a}</p>
+						<Fade inline>
+							<p className={styles.title}>{q}</p>
+							<p className={styles.body}>{a}</p>
+						</Fade>
 					</li>
 				))}
 			</ul>

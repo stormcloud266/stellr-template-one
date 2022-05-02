@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Container, Title } from '@UI'
+import { Fade } from '@animations'
 import * as styles from './cta.module.scss'
 
 const Cta = () => {
@@ -7,12 +8,16 @@ const Cta = () => {
 		<div className={styles.bg}>
 			<Container wrapper>
 				<div className={styles.inner}>
-					<Title md className={styles.title}>
-						Ready to work together?
-					</Title>
-					<Button cta to='/#contact'>
-						Call Now
-					</Button>
+					<Fade>
+						<Title md className={styles.title}>
+							Ready to work together?
+						</Title>
+					</Fade>
+					<Fade>
+						<Button cta to='/#contact'>
+							Call Now
+						</Button>
+					</Fade>
 				</div>
 			</Container>
 		</div>

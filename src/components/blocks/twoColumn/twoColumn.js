@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, FlexContainer, FlexItem } from '@UI'
-import * as styles from './twoColumn.module.scss'
+// import * as styles from './twoColumn.module.scss'
 
 const TwoColumn = ({ left, right }) => {
 	return (

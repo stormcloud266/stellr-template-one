@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import classnames from 'classnames'
 import { NavLinks } from '@global'
 import { Container } from '@UI'
+import { Fade } from '@animations'
 import * as styles from './header.module.scss'
 import Helmet from 'react-helmet'
 import { useCurrentWidth } from '@hooks'
@@ -21,29 +22,33 @@ const Header = () => {
 
 	return (
 		<>
-			<Container wrapper className={styles.quickAction}>
-				<a href='tel:+1-555-555-5555'>Call Now +1-555-555-5555</a>
-			</Container>
+			<Fade>
+				<Container wrapper className={styles.quickAction}>
+					<a href='tel:+1-555-555-5555'>Call Now +1-555-555-5555</a>
+				</Container>
+			</Fade>
 			<header className={styles.header}>
 				<Helmet
 					bodyAttributes={{
 						class: isNavOpen ? styles.noScroll : null,
 					}}
 				/>
-				<Container wrapper className={styles.container}>
-					<Link to='/' className={styles.logo}>
-						Logo
-					</Link>
+				<Fade>
+					<Container wrapper className={styles.container}>
+						<Link to='/' className={styles.logo}>
+							Logo
+						</Link>
 
-					<NavButton
-						isOpen={isNavOpen}
-						onClick={() => setIsNavOpen(!isNavOpen)}
-					/>
+						<NavButton
+							isOpen={isNavOpen}
+							onClick={() => setIsNavOpen(!isNavOpen)}
+						/>
 
-					<nav className={classnames(styles.nav, isNavOpen && styles.open)}>
-						<NavLinks />
-					</nav>
-				</Container>
+						<nav className={classnames(styles.nav, isNavOpen && styles.open)}>
+							<NavLinks />
+						</nav>
+					</Container>
+				</Fade>
 			</header>
 		</>
 	)

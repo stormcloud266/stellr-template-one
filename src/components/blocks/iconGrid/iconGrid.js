@@ -2,6 +2,8 @@ import React from 'react'
 import classes from 'classnames'
 import { ThumbsUp } from '@images/icons'
 import { Container, Title } from '@UI'
+import { Fade } from '@animations'
+import { useWindowWidth } from '@context'
 import * as styles from './iconGrid.module.scss'
 
 const data = [
@@ -23,6 +25,9 @@ const data = [
 ]
 
 const IconGrid = ({ columns, center }) => {
+	const windowWidth = useWindowWidth()
+	console.log('windowWidth: ', windowWidth)
+
 	const listClasses = classes(
 		styles.list,
 		center && styles.center,
@@ -34,11 +39,13 @@ const IconGrid = ({ columns, center }) => {
 			<ul className={listClasses}>
 				{data.map(({ icon, title, body }, i) => (
 					<li key={i} className={styles.item}>
-						{icon}
-						<Title className={styles.title} sm tag='h3'>
-							{title}
-						</Title>
-						<p className={styles.body}>{body}</p>
+						<Fade inline delay={windowWidth > 900 ? i * 0.15 : 0}>
+							{icon}
+							<Title className={styles.title} sm tag='h3'>
+								{title}
+							</Title>
+							<p className={styles.body}>{body}</p>
+						</Fade>
 					</li>
 				))}
 			</ul>

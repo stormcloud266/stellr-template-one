@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Container, FlexContainer, FlexItem, Title } from '@UI'
 import { ThumbsUp } from '@images/icons'
+import { Fade } from '@animations'
 import * as styles from './form.module.scss'
 
 const Form = () => {
@@ -24,21 +25,23 @@ const Form = () => {
 				<FlexContainer alignStart collapseOnMd>
 					<FlexItem className={styles.flexItemText}>
 						<Container textBlock>
-							<Title tag='h2' md>
-								Ready to work together?
-							</Title>
-							<p>
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-								Sapiente perferendis illum praesentium molestias rerum quod
-								ipsa, esse sint!
-							</p>
-							<ul className={styles.list}>
-								{data.map(({ text, icon }) => (
-									<li>
-										{icon} <span>{text}</span>
-									</li>
-								))}
-							</ul>
+							<Fade>
+								<Title tag='h2' md>
+									Ready to work together?
+								</Title>
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+									Sapiente perferendis illum praesentium molestias rerum quod
+									ipsa, esse sint!
+								</p>
+								<ul className={styles.list}>
+									{data.map(({ text, icon }) => (
+										<li>
+											{icon} <span>{text}</span>
+										</li>
+									))}
+								</ul>
+							</Fade>
 						</Container>
 					</FlexItem>
 					<FlexItem>
