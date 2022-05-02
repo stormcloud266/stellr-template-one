@@ -58,7 +58,7 @@ const Form = () => {
 								<label htmlFor='message'>Message</label>
 								<textarea name='message' id='message'></textarea>
 							</div>
-							<Button cta>Send Email</Button>
+							<Button>Send Email</Button>
 						</form>
 					</FlexItem>
 				</FlexContainer>
