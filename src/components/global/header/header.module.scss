@@ -5,11 +5,23 @@
 	overflow: hidden;
 }
 
+.quickAction {
+	background-color: $color-cta;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
+	font-size: $size-0;
+	a {
+		color: $color-text;
+	}
+}
+
 .header {
 	background-color: $color-header-background;
 
 	// positioning
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	z-index: 1000;

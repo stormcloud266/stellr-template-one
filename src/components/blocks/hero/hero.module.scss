@@ -3,7 +3,7 @@
 
 .hero {
 	background-color: black;
-	min-height: 100vh;
+	min-height: calc(100vh - 8rem);
 	width: 100%;
 	position: relative;
 	overflow: hidden;
