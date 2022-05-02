@@ -4,11 +4,12 @@
 	background-color: #fff;
 	border: 1px solid rgba(11, 95, 236, 0.075);
 	border-radius: 3px;
-	box-shadow: 0 0.5rem 2.5rem rgb(60 127 239 / 15%);
+	box-shadow: 0 0.5rem 2.5rem rgba(86, 91, 100, 15%);
 	padding: $s-4 $s-3;
 	width: 100%;
-	max-width: 48rem;
-	justify-self: center;
+	max-width: 52rem;
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

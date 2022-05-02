@@ -35,8 +35,8 @@ const Form = () => {
 									ipsa, esse sint!
 								</p>
 								<ul className={styles.list}>
-									{data.map(({ text, icon }) => (
-										<li>
+									{data.map(({ text, icon }, i) => (
+										<li key={i}>
 											{icon} <span>{text}</span>
 										</li>
 									))}

@@ -32,7 +32,7 @@ const Testimonials = () => {
 			</Fade>
 			<div className={styles.cardContainer}>
 				{data.map(({ body, name, role }, i) => (
-					<Fade delay={windowWidth > 900 ? i * 0.15 : 0} y={20}>
+					<Fade delay={windowWidth > 900 ? i * 0.15 : 0} y={20} key={i}>
 						<TestimonialCard body={body} name={name} role={role} />
 					</Fade>
 				))}

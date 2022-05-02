@@ -38,7 +38,7 @@ const FaqList = () => {
 					<li key={i}>
 						<Fade inline>
 							<p className={styles.title}>{q}</p>
-							<p className={styles.body}>{a}</p>
+							<p>{a}</p>
 						</Fade>
 					</li>
 				))}

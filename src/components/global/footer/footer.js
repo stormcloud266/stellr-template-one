@@ -10,7 +10,7 @@ const Footer = () => (
 		<Fade>
 			<Container wrapperSmOnMd textLight>
 				<FlexContainer collapseOnMd alignStart className={styles.inner}>
-					<FlexItem className={styles.text}>
+					<FlexItem>
 						<Link to='/'>Logo</Link>
 						<p>
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
