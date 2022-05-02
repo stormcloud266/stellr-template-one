@@ -4,8 +4,8 @@
 .list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	column-gap: $size-2;
-	row-gap: $size-6;
+	column-gap: $s-2;
+	row-gap: $s-6;
 }
 
 .col2 {
@@ -21,8 +21,8 @@
 }
 
 .title {
-	margin-top: $size-1;
-	margin-bottom: $size-2;
+	margin-top: $s-1;
+	margin-bottom: $s-2;
 }
 
 @include whenMedium {

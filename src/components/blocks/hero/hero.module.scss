@@ -23,18 +23,18 @@
 }
 
 .subtitle {
-	font-size: $size-4;
+	font-size: $s-4;
 	text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 @include whenMedium {
 	.subtitle {
-		font-size: $size-3;
+		font-size: $s-3;
 	}
 }
 
 @include whenSmall {
 	.subtitle {
-		font-size: $size-2;
+		font-size: $s-2;
 	}
 }

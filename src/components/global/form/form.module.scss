@@ -2,15 +2,15 @@
 @import '@globalStyles/mixins';
 
 .list {
-	margin-top: $size-4;
+	margin-top: $s-4;
 
 	li {
 		display: flex;
 		align-items: center;
-		margin-top: $size-2;
+		margin-top: $s-2;
 
 		span {
-			margin-left: $size-0;
+			margin-left: $s-0;
 		}
 	}
 }
@@ -23,7 +23,7 @@
 .formSection {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: $size-2;
+	margin-bottom: $s-2;
 
 	label {
 		margin-bottom: 0.2rem;
@@ -43,6 +43,6 @@
 
 @include whenMedium {
 	.flexItemText {
-		margin-bottom: $size-6 !important;
+		margin-bottom: $s-6 !important;
 	}
 }

@@ -2,8 +2,8 @@
 @import '@globalStyles/mixins';
 
 .footer {
-	padding-top: $size-8;
-	font-size: $size-0;
+	padding-top: $s-8;
+	font-size: $s-0;
 	background-color: $color-footer-background;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .title {
-	font-size: $size-2;
+	font-size: $s-2;
 	margin-bottom: 0.8rem;
 }
 
@@ -40,9 +40,9 @@
 }
 
 .branding {
-	margin-top: $size-8;
-	padding-top: $size-5;
-	padding-bottom: $size-5;
+	margin-top: $s-8;
+	padding-top: $s-5;
+	padding-bottom: $s-5;
 	background-color: black;
 }
 

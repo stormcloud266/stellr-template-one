@@ -7,7 +7,7 @@
 }
 
 .group {
-	margin-bottom: $size-2;
+	margin-bottom: $s-2;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -16,7 +16,7 @@
 
 .toggle,
 .answer p {
-	padding: $size-0 $size-1;
+	padding: $s-0 $s-1;
 	text-align: left;
 }
 
@@ -50,13 +50,13 @@
 .list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	column-gap: $size-6;
-	row-gap: $size-8;
+	column-gap: $s-6;
+	row-gap: $s-8;
 }
 
 .title {
 	font-weight: bold;
-	margin-bottom: $size-0;
+	margin-bottom: $s-0;
 }
 
 @include whenMedium {
@@ -68,6 +68,6 @@
 @include whenSmall {
 	.list {
 		grid-template-columns: 1fr;
-		row-gap: $size-6;
+		row-gap: $s-6;
 	}
 }

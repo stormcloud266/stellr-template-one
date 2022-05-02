@@ -5,7 +5,7 @@
 	border: 1px solid rgba(11, 95, 236, 0.075);
 	border-radius: 3px;
 	box-shadow: 0 0.5rem 2.5rem rgb(60 127 239 / 15%);
-	padding: $size-4 $size-3;
+	padding: $s-4 $s-3;
 	width: 100%;
 	max-width: 48rem;
 	justify-self: center;
@@ -26,8 +26,8 @@
 }
 
 .info {
-	font-size: $size-0;
-	margin-top: $size-4;
+	font-size: $s-0;
+	margin-top: $s-4;
 }
 
 .name {

@@ -1,0 +1,28 @@
+@import '@globalStyles/variables';
+
+.container {
+	padding-top: 0.8rem;
+	padding-right: 0.8rem;
+	position: relative;
+}
+
+.left {
+	padding-right: 0;
+	padding-left: 0.8rem;
+}
+
+.accent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: $color-cta;
+}
+
+.left .accent {
+	right: unset;
+	left: 0;
+}
+
+.imageContainer {
+	box-shadow: 0 1rem 2.5rem rgba(86, 91, 100, 0.25);
+}

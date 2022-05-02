@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Layout, Seo, Cta } from '@global'
-import { Container, Title } from '@UI'
+import { Container, Title, Image } from '@UI'
 import {
 	Gallery,
 	Hero,
@@ -33,14 +33,14 @@ const IndexPage = ({ data }) => {
 					</Container>
 				}
 				right={
-					<div>
+					<Image>
 						<StaticImage
 							src='../assets/images/hero.jpg'
 							alt=''
 							layout='constrained'
 							width={800}
 						/>
-					</div>
+					</Image>
 				}
 			/>
 

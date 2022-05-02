@@ -6,14 +6,14 @@
 }
 
 .inner {
-	padding: $size-9 0;
+	padding: $s-9 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 }
 
 .title {
-	margin-right: $size-3;
+	margin-right: $s-3;
 }
 
 @include whenSmall {
@@ -23,6 +23,6 @@
 
 	.title {
 		margin-right: 0;
-		margin-bottom: $size-3;
+		margin-bottom: $s-3;
 	}
 }

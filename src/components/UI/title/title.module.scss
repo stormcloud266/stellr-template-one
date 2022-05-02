@@ -2,7 +2,7 @@
 @import '@globalStyles/mixins';
 
 .title {
-	font-size: $size-9;
+	font-size: $s-9;
 }
 
 .center {
@@ -18,47 +18,47 @@
 }
 
 .lg {
-	font-size: $size-10;
+	font-size: $s-10;
 	line-height: 1.3;
 }
 
 .md {
-	font-size: $size-6;
+	font-size: $s-6;
 	line-height: 1.4;
 }
 
 .sm {
-	font-size: $size-4;
+	font-size: $s-4;
 }
 
 @include whenMedium {
 	.title {
-		font-size: $size-7;
+		font-size: $s-7;
 	}
 
 	.lg {
-		font-size: $size-8;
+		font-size: $s-8;
 	}
 
 	.md {
-		font-size: $size-5;
+		font-size: $s-5;
 	}
 
 	.sm {
-		font-size: $size-3;
+		font-size: $s-3;
 	}
 }
 
 @include whenSmall {
 	.title {
-		font-size: $size-6;
+		font-size: $s-6;
 	}
 
 	.lg {
-		font-size: $size-7;
+		font-size: $s-7;
 	}
 
 	.md {
-		font-size: $size-5;
+		font-size: $s-5;
 	}
 }

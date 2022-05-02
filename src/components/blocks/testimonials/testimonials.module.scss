@@ -4,8 +4,8 @@
 .cardContainer {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: $size-2;
-	margin-top: $size-6;
+	gap: $s-2;
+	margin-top: $s-6;
 }
 
 @include whenMedium {
