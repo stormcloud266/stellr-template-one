@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { NavLinks } from '@global'
 import { Container, FlexContainer, FlexItem, Title } from '@UI'
+import { Fade } from '@animations'
 import * as styles from './footer.module.scss'
 
 const Footer = () => (
@@ -41,15 +42,17 @@ const Footer = () => (
 			</FlexContainer>
 		</Container>
 
-		<Container wrapper textLight textCenter className={styles.branding}>
-			<p>Copyright 2022 | All Rights Reserved</p>
-			<p className={styles.brandingLink}>
-				Developed by{' '}
-				<a href='https://www.stellrweb.com' target='_blank' rel='noreferrer'>
-					Stellr Web
-				</a>
-			</p>
-		</Container>
+		<div className={styles.branding}>
+			<Container wrapper textLight textCenter>
+				<p>Copyright 2022 | All Rights Reserved</p>
+				<p className={styles.brandingLink}>
+					Developed by{' '}
+					<a href='https://www.stellrweb.com' target='_blank' rel='noreferrer'>
+						Stellr Web
+					</a>
+				</p>
+			</Container>
+		</div>
 	</footer>
 )
 
