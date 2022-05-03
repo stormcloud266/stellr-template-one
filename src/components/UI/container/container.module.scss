@@ -3,39 +3,39 @@
 
 // sections
 .section {
-	padding-top: 10rem;
-	padding-bottom: 10rem;
+	padding-top: 14rem;
+	padding-bottom: 14rem;
 }
 .sectionTop {
-	padding-top: 10rem;
+	padding-top: 14rem;
 }
 .sectionBottom {
-	padding-bottom: 10rem;
+	padding-bottom: 14rem;
 }
 
 @include whenMedium {
 	.section {
-		padding-top: 8rem;
-		padding-bottom: 8rem;
+		padding-top: 12rem;
+		padding-bottom: 12rem;
 	}
 	.sectionTop {
-		padding-top: 8rem;
+		padding-top: 12rem;
 	}
 	.sectionBottom {
-		padding-bottom: 8rem;
+		padding-bottom: 12rem;
 	}
 }
 
 @include whenSmall {
 	.section {
-		padding-top: 6rem;
-		padding-bottom: 6rem;
+		padding-top: 9rem;
+		padding-bottom: 9rem;
 	}
 	.sectionTop {
-		padding-top: 6rem;
+		padding-top: 9rem;
 	}
 	.sectionBottom {
-		padding-bottom: 6rem;
+		padding-bottom: 9rem;
 	}
 }
 
