@@ -40,7 +40,7 @@ const IconGrid = ({ columns, center }) => {
 					<li key={i}>
 						<Fade inline delay={windowWidth > 900 ? i * 0.15 : 0}>
 							{icon}
-							<Title className={styles.title} sm tag='h3'>
+							<Title className={styles.title} xs tag='h3'>
 								{title}
 							</Title>
 							<p>{body}</p>

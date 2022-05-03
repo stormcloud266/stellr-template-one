@@ -9,7 +9,7 @@ const Cta = () => {
 			<Container wrapper>
 				<div className={styles.inner}>
 					<Fade>
-						<Title md className={styles.title}>
+						<Title sm className={styles.title}>
 							Ready to work together?
 						</Title>
 					</Fade>

@@ -8,8 +8,8 @@ const Title = ({
 	children,
 	center,
 	lg,
-	md,
 	sm,
+	xs,
 	shadow,
 	overflowHidden,
 	className,
@@ -20,8 +20,8 @@ const Title = ({
 		center && styles.center,
 		shadow && styles.shadow,
 		lg && styles.lg,
-		md && styles.md,
 		sm && styles.sm,
+		xs && styles.xs,
 		overflowHidden && styles.overflowHidden,
 		className && className
 	)
@@ -86,8 +86,8 @@ Title.propTypes = {
 	center: PropTypes.bool,
 	shadow: PropTypes.bool,
 	lg: PropTypes.bool,
-	md: PropTypes.bool,
 	sm: PropTypes.bool,
+	xs: PropTypes.bool,
 	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,
 }
