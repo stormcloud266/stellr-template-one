@@ -45,7 +45,7 @@ const Header = () => {
 						/>
 
 						<nav className={classnames(styles.nav, isNavOpen && styles.open)}>
-							<NavLinks />
+							<NavLinks ctaClass={styles.cta} />
 						</nav>
 					</Container>
 				</Fade>

@@ -6,7 +6,7 @@
 }
 
 .quickAction {
-	background-color: $color-cta;
+	background-color: $color-background-accent;
 	font-weight: 700;
 	text-align: center;
 	padding-top: 0.4rem;
@@ -36,6 +36,8 @@
 
 .nav {
 	display: flex;
+	align-items: center;
+	padding: 1.2rem 0;
 
 	a {
 		margin-left: 4.8rem;
@@ -48,7 +50,6 @@
 }
 
 .logo {
-	padding: 1.2rem 0;
 	position: relative;
 	z-index: 1000;
 	color: $color-text-tertiary;
@@ -59,7 +60,18 @@
 	display: none;
 }
 
+.cta {
+	@include buttonStyles;
+	@include buttonCtaStyles;
+	color: $color-text-primary !important;
+	padding: 0.6rem 2.6rem;
+}
+
 @include whenMedium {
+	.logo {
+		padding: 1.2rem 0;
+	}
+
 	.toggle {
 		// overwrite default button styles
 		border: 1px solid transparent;
@@ -122,6 +134,11 @@
 			opacity: 0;
 			transform: translateY(1rem);
 			padding: 1rem 1.4rem;
+
+			&.cta {
+				font-size: $s-2;
+				padding: 0.8rem 2.4rem;
+			}
 		}
 	}
 

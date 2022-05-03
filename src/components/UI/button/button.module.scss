@@ -1,38 +1,11 @@
 @import '@globalStyles/variables';
+@import '@globalStyles/mixins';
 
 .button {
-	padding: 0.8rem 1.8rem;
-	cursor: pointer;
-	color: white;
-	font-size: 1.4rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	background-color: $color-text-tertiary;
-	border: 2px solid $color-text-tertiary;
-	outline: none;
-	display: inline-block;
-	transition: all 0.2s;
-	box-shadow: 0px 0px hsl(0, 0%, 20%);
+	@include buttonStyles;
 	min-width: 22rem;
-	text-align: center;
-
-	&:hover,
-	&:focus {
-		background-color: darken($color-cta, 10%);
-		border-color: darken($color-cta, 10%);
-		color: $color-text-tertiary;
-		box-shadow: 2px 2px $color-text-tertiary;
-	}
 }
 
 .cta {
-	background-color: $color-cta;
-	border-color: $color-cta;
-	color: $color-text-primary;
-	&:hover,
-	&:focus {
-		background-color: darken($color-cta, 10%);
-		border-color: darken($color-cta, 10%);
-	}
+	@include buttonCtaStyles;
 }
