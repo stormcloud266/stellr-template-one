@@ -43,7 +43,7 @@
 	margin-top: $s-8;
 	padding-top: $s-5;
 	padding-bottom: $s-5;
-	background-color: black;
+	background-color: darken($color-footer-background, 5%);
 }
 
 .brandingLink {

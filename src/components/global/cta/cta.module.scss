@@ -1,10 +1,6 @@
 @import '@globalStyles/variables';
 @import '@globalStyles/mixins';
 
-.bg {
-	background-color: $color-background-accent;
-}
-
 .inner {
 	padding: $s-9 0;
 	display: flex;

@@ -5,7 +5,7 @@ import * as styles from './cta.module.scss'
 
 const Cta = () => {
 	return (
-		<div className={styles.bg}>
+		<Container bgPrimary textLight>
 			<Container wrapper>
 				<div className={styles.inner}>
 					<Fade>
@@ -20,7 +20,7 @@ const Cta = () => {
 					</Fade>
 				</div>
 			</Container>
-		</div>
+		</Container>
 	)
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Layout, Seo, Cta } from '@global'
-import { Container, Title, Image } from '@UI'
+import { Button, Container, Title, Image } from '@UI'
 import {
 	Gallery,
 	Hero,
@@ -27,8 +27,13 @@ const IndexPage = ({ data }) => {
 							<Title>Welcome to this awesome website</Title>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Laborum molestiae deserunt quia dolor aspernatur!
+								Laborum molestiae deserunt quia dolor aspernatur! Lorem ipsum
+								dolor sit amet consectetur adipisicing elit. Voluptates,
+								perferendis!
 							</p>
+							<Button mt to='/'>
+								Read Our Story
+							</Button>
 						</Container>
 					}
 					right={
@@ -44,13 +49,18 @@ const IndexPage = ({ data }) => {
 				/>
 			</Container>
 
+			<Container wrapper>
+				<Container section wrapper textBlock textLight textCenter bgPrimary>
+					<Title sm>Serving our local community since 1995</Title>
+				</Container>
+			</Container>
+
 			<IconGrid />
+			<Cta />
 
 			<Container section>
 				<FaqSlider />
 			</Container>
-
-			<Cta />
 
 			<Testimonials />
 

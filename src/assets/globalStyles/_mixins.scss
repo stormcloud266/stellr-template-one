@@ -32,8 +32,8 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	background-color: $color-text-tertiary;
-	border: 2px solid $color-text-tertiary;
+	background-color: $color-primary;
+	border: 2px solid $color-primary;
 	outline: none;
 	display: inline-block;
 	transition: all 0.2s;
@@ -45,7 +45,7 @@
 		background-color: darken($color-cta, 10%);
 		border-color: darken($color-cta, 10%);
 		color: $color-text-primary;
-		box-shadow: 2px 2px $color-text-tertiary;
+		box-shadow: 2px 2px $color-primary;
 	}
 }
 

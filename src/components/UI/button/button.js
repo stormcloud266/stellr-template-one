@@ -5,9 +5,10 @@ import classnames from 'classnames'
 import * as styles from './button.module.scss'
 
 const Button = forwardRef(
-	({ href, to, cta, children, className, ...rest }, ref) => {
+	({ href, to, cta, mt, children, className, ...rest }, ref) => {
 		const classes = classnames(
 			cta && styles.cta,
+			mt && styles.mt,
 			styles.button,
 			className && className
 		)
